@@ -15,6 +15,7 @@ int main()
         doubleArray[count] = count + 0.5;
     }
 
+
     for(int count{ intArray.getLength() - 1 }; count >= 0; --count)
         std::cout << intArray[count] << '\t' << doubleArray[count] << '\n';
     
@@ -23,7 +24,6 @@ int main()
     //Template classes in the standard library:
 
     //Splitting up template classes:
-    //read this all again and try use it...
 
 
     return 0;

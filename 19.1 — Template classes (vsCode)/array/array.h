@@ -45,11 +45,6 @@ public:
 
 };
 
-// member functions defined outside the class need their own template declaration
-template<typename T>
-int Array<T>::getLength() const
-{
-    return m_length;
-}
+#include "array.inl"
 
 #endif // end ARRAY_H

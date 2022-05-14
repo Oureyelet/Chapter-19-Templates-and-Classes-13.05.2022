@@ -42,7 +42,18 @@ public:
         return m_data[index];
     }
 
-    int getLength() const { return m_length; }
+    int getLength() const;
+    void getInfo() const;
 };
 
-#endif INTARRAY_H
+int IntArray::getLength() const
+{
+    return m_length;
+}
+
+void IntArray::getInfo() const
+{
+    std::cout << "Here is IntArray class\n";
+}
+
+#endif // end of INTARRAY_H
