@@ -4,7 +4,7 @@
 template<typename T, int size> // size is the expression parameter
 class StaticArray_Base
 {
-private:
+protected:
     // The expression parameter controls the size of the array
     T m_array[size]{};
 
@@ -62,7 +62,7 @@ public:
     void print()
     {
         for(int i{ 0 }; i < size; ++i)
-            std::cout << std::scientific << this -> m_array[i];
+            std::cout << std::scientific <<this -> m_array[i] << ' ';
         std::cout << '\n';
     }
 
@@ -117,14 +117,12 @@ int main()
     
     intArray.member_FCT_Print();
 
-    std::cout << '\n';
-
     StaticArray<double, 4> doubleArray{};// declare a double buffer with room for 4 doubles
 
     for(int i{ 0 }; i < 4; ++i)
         doubleArray[i] = i;
     
-    doubleArray.member_FCT_Print();
+    doubleArray.print();
 
 
     //its no printing with std::scientific check why...
