@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <string>
 
 // Our Storage class for non-pointers
 template<typename T>
@@ -111,7 +112,7 @@ int main()
     myintptr.print();
 
     // Dynamically allocate a temporary string
-    char* name{ new char[40]{ "Alex" } };
+    char* name{ new char[5]{ 'A' } };
 
     // Store the name
     Storage<char*> myName{ name };
